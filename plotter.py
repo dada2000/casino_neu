@@ -4,13 +4,13 @@ import random
 
 # Define the function
 def f(x):
-    return x**3 - 2
+    return x**4
 
 def g(x):
-    return np.power((x+2),(1/3)) #(x+2)**(1/3)
+    return x - 4 #ROOT: np.power((x+2),(1/3)) #(x+2)**(1/3)
 
 # Generate x values from -10 to 10
-x = np.linspace(-10, 10, 100)
+x = np.linspace(-2, 2, 100)
 print(f"np.linspace(-10, 10, 10) --> Type(x):{type(x)}")
 print(x)
 print("****************")
@@ -22,7 +22,7 @@ y = f(x)
 z = g(x)
 
 # Create the plot
-#plt.plot(x, y, color = "blue")
+plt.plot(x, y, color = "blue")
 plt.plot(x, z, color = "orange")
 
 # Add labels and title
